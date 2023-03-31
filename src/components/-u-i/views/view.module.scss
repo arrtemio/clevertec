@@ -1,0 +1,43 @@
+.tile {
+  max-width: 825px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 0 21.5px;
+
+  @media (max-width: 1080px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 585px) {
+    max-width: 288px;
+    justify-content: center;
+  }
+}
+
+.list {
+  max-width: 825px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.empty__wrapper {
+  margin-top: 200px;
+  text-align: center;
+  h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 700;
+    color: rgba(167, 167, 167, 1);
+  }
+
+  @media (max-width: 585px) {
+    margin-top: 137px;
+    h3 {
+      font-size: 18px;
+    }
+  }
+}

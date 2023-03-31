@@ -1,0 +1,39 @@
+.wrapper {
+  margin-left: 30px;
+
+  @media (max-width: 880px) {
+    margin-left: 0;
+  }
+
+  @media (max-width: 585px) {
+    margin-top: 13px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__main {
+    margin-top: 32px;
+    font-weight: 600;
+
+    @media (max-width: 585px) {
+     &:first-of-type {
+       margin-top: 24px;
+     }
+    }
+  }
+
+  &__secondary {
+    margin: 16px 0 0 30px;
+  }
+
+  &__third {
+    margin: 16px 0 0 60px;
+  }
+
+  &__fourth {
+    margin: 16px 0 0 90px;
+  }
+}

@@ -1,0 +1,70 @@
+.weekend {
+  width:32px;
+  height:32px;
+  background:#FEEBEA;
+  border-radius:16px;
+  font-size:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:none;
+}
+.weekend__day{
+  color:#A7A7A7;
+  background:rgb(254, 235, 234);
+}
+.weekend__today{
+  color:rgb(248, 54, 0);
+  background-color:rgb(254, 235, 234);
+}
+.current {
+  border:none;
+  cursor:pointer;
+  background:white;
+  width:32px;
+  height:32px;
+  font-size:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:16px;
+}
+.current:hover {
+  border:1px solid #BFC4C9;
+}
+.current_day {
+  background:linear-gradient(233.73deg, #F83600 -16.08%, #F9D423 327.37%);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  color:rgb(248, 54, 0);
+}
+.current_regular {
+  color:rgb(54, 54, 54);
+}
+.regular {
+  border:none;
+  background:none;
+  width:32px;
+  height:32px;
+  font-size:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:rgb(167, 167, 167);
+}
+.selected {
+  border:none;
+  cursor:pointer;
+  background:linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+  width:32px;
+  height:32px;
+  font-size:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:16px;
+}
+.selected_day{
+  color:white;
+  background-image:linear-gradient(231.58deg, rgb(248, 54, 0) -53.35%, rgb(249, 212, 35) 297.76%)
+}

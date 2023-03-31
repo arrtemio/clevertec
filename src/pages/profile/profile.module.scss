@@ -1,0 +1,261 @@
+.wrapper {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1110px;
+  width: 100%;
+  margin: 0 auto;
+  @media (max-width: 880px) {
+    max-width: 640px;
+  }
+  @media (max-width: 585px) {
+    max-width: 288px;
+  }
+}
+
+.header {
+  margin-top: 47px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 880px) {
+    margin-top: 32px;
+  }
+  @media (max-width: 585px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
+    font-weight: 500;
+    font-size: 52px;
+    line-height: 64px;
+    font-style: normal;
+    @media (max-width: 585px) {
+      font-size: 26px;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+}
+
+.avatar {
+  position: relative;
+  height: 160px;
+  margin-right: 30px;
+  border-radius: 50%;
+  @media (max-width: 585px) {
+    height: 150px;
+    margin: 0 0 24px 0;
+  }
+  &__img {
+    border-radius: 50%;
+    cursor: pointer;
+    width: 160px;
+    height: 160px;
+    @media (max-width: 585px) {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  &__background {
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    width: 160px;
+    height: 42px;
+    display: none;
+    justify-content: center;
+    @media (max-width: 585px) {
+      width: 150px;
+      height: 40px;
+    }
+    &_first {
+      @media (max-width: 585px) {
+        width: 132px;
+        height: 40px;
+      }
+    }
+    &_second {
+      position: absolute;
+      top: 5px;
+      @media (max-width: 585px) {
+        width: 24px;
+        height: 24px;
+        top: 7.5px
+      }
+    }
+  }
+
+  &:hover &__background {
+    display: flex;
+  }
+}
+
+.block {
+  &__name {
+    color: rgba(54, 54, 54, 1);
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 8px;
+    @media (max-width: 585px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(167, 167, 167, 1);
+    margin-bottom: 32px;
+    @media (max-width: 585px) {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+}
+.booked, .deliver, .history {
+  margin-top: 92px;
+  @media (max-width: 585px) {
+    margin-top: 42px;
+  }
+}
+
+.data {
+  margin-top: 92px;
+  @media (max-width: 585px) {
+    margin-top: 42px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    @media (max-width: 585px) {
+      flex-direction: column;
+    }
+
+    &_right {
+      max-width: 540px;
+      width: 100%;
+    }
+    &_left {
+      max-width: 540px;
+      width: 100%;
+      margin-right: 30px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    @media (max-width: 585px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.eye_button {
+  border: none;
+  background: rgba(249, 249, 250, 1);
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.check {
+  position: absolute;
+  top: 16px;
+  right: 44px;
+}
+
+.capture {
+  max-width: 540px;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  margin-left: 12px;
+  color: #A7A7A7;
+
+  @media (max-width: 585px) {
+    max-width: 270px;
+    width: 100%;
+  }
+
+  &__error {
+    color: rgb(244, 44, 79);
+  }
+
+  &__mid {
+    height: 36px;
+  }
+}
+
+.button {
+  width: 255px;
+  height: 52px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  @media (max-width: 585px) {
+    width: 288px;
+  }
+
+  &__update {
+    border: 1px solid #BFC4C9;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(54, 54, 54, 1);
+    margin-right: 30px;
+
+    &:hover {
+      border: 1px solid #A7A7A7;
+      box-shadow: 0 2px 5px rgba(54, 54, 54, 0.1);
+    }
+    &:active {
+      border: 1px solid #BFC4C9;
+      box-shadow:
+        0 3px 4px rgba(222, 125, 11, 0.2),
+        0 1px 10px rgba(249, 89, 8, 0.2);
+    }
+  }
+  &__save {
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    color: rgba(255, 255, 255, 1);
+
+    @media (max-width: 585px) {
+      margin-top: 16px;
+    }
+    &:hover {
+      border: 1px solid #FF740F;
+      box-shadow: 0 2px 5px rgba(54, 54, 54, 0.1);
+    }
+    &:active {
+      box-shadow:
+        0 3px 4px rgba(222, 125, 11, 0.2),
+        0 1px 10px rgba(249, 89, 8, 0.2);
+    }
+    &:disabled {
+      background: #EBEBEB;
+      cursor: default;
+      &:hover {
+        box-shadow: none;
+        border: none;
+      }
+      &:active {
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+.file {
+  display: none;
+}

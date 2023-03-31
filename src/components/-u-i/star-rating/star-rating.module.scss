@@ -1,0 +1,16 @@
+.wrapper {
+  input {
+    display: none;
+    height: 42px;
+  }
+  img {
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+    @media (max-width: 585px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

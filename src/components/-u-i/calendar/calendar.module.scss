@@ -1,0 +1,133 @@
+.wrapper {
+  width: 256px;
+
+  box-shadow:
+    0 2px 4px rgba(191, 196, 201, 0.2),
+    0 3px 4px rgba(191, 196, 201, 0.18),
+    0 1px 5px rgba(191, 196, 201, 0.24);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  justify-content: space-between;
+}
+
+.select {
+  margin-left: 24px;
+  position: relative;
+  &__month {
+    width: 132px;
+    font-style: normal;
+    position: relative;
+    display: inline-block;
+    color: #A7A7A7;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    &:focus {
+      outline: none;
+    }
+  }
+  &__option {
+    color: black;
+  }
+
+  &__caret {
+    cursor: pointer;
+    height: 24px;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+  }
+}
+
+.arrow {
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__back, &__next {
+    border: none;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  &__next {
+    margin-left: 12px;
+    transform: rotate(180deg);
+  }
+}
+
+.days {
+  margin: 0 16px;
+  width: 224px;
+  height: 32px;
+  display: flex;
+  p {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.calendar {
+  align-self: center;
+  max-width: 224px;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__day {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__weekend {
+    width: 32px;
+    height: 32px;
+    background: #FEEBEA;
+    border-radius: 16px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.text {
+  &__weekend {
+    color: #A7A7A7;
+  }
+  &__current {
+    background: linear-gradient(233.73deg, #F83600 -16.08%, #F9D423 327.37%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &__day {
+    color: #BFC4C9;
+  }
+
+}

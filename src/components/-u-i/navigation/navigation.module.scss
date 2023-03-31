@@ -1,0 +1,222 @@
+.nav {
+  max-width: 825px;
+  width: 100%;
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+
+  @media (max-width: 585px) {
+    max-width: 288px;
+    margin-bottom: 16px;
+  }
+
+  &__active_search {
+    display: none;
+    @media (max-width: 585px) {
+      display: block;
+      position: absolute;
+      z-index: 1000;
+      input {
+        width: 288px;
+        height: 32px;
+        border: none;
+        box-shadow:
+          0 2px 4px rgba(191, 196, 201, 0.2),
+          0 3px 4px rgba(191, 196, 201, 0.18),
+          0 1px 5px rgba(191, 196, 201, 0.24);
+        border-radius: 599px;
+        padding: 0 40px 0 16px;
+        font-size: 12px;
+        caret-color: rgb(248, 54, 0);
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: #A7A7A7;
+        }
+      }
+      button {
+        position: absolute;
+        border: none;
+        background: none;
+        cursor: pointer;
+        right: 16px;
+        top: 8px;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    &_mob {
+      display: none;
+      button {
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: none;
+        background: none;
+        box-shadow:
+         0 2px 4px rgba(191, 196, 201, 0.2),
+         0 3px 4px rgba(191, 196, 201, 0.18),
+         0 1px 5px rgba(191, 196, 201, 0.24);
+        font: menu;
+        &:first-child {
+          margin-right: 16px;
+        }
+      }
+
+      @media (max-width: 585px) {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__sort {
+    button {
+      display: flex;
+      align-items: center;
+      width: 150px;
+      height: 38px;
+      border-radius: 599px;
+      margin-left: 16px;
+      border: none;
+      background-color: white;
+      box-shadow:
+        0 2px 4px rgba(191, 196, 201, 0.2),
+        0 3px 4px rgba(191, 196, 201, 0.18),
+        0 1px 5px rgba(191, 196, 201, 0.24);
+      cursor: pointer;
+      color: #a7a7a7;
+
+      img {
+        padding: 0 8px 0 16px;
+      }
+    }
+
+    @media (max-width: 585px) {
+      span {
+        display: none;
+      }
+      button {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__search {
+    position: relative;
+    input {
+      width: 350px;
+      height: 38px;
+      border-radius: 599px;
+      border: none;
+      box-shadow: 0 2px 4px rgba(191, 196, 201, 0.2), 0 3px 4px rgba(191, 196, 201, 0.18),
+        0 1px 5px rgba(191, 196, 201, 0.24);
+      position: relative;
+      padding-left: 40px;
+      caret-color: rgb(248, 54, 0);
+
+      @media (max-width: 880px) {
+        width: 274px;
+      }
+    }
+    input:focus {
+      outline: none;
+    }
+    input::placeholder {
+      color: #a7a7a7;
+    }
+    button {
+      border: none;
+      background-color: white;
+      cursor: default;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      left: 17px;
+      top: 11px;
+    }
+  }
+
+  &__view {
+    display: flex;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 38px;
+      height: 38px;
+      border: none;
+      background: white;
+      cursor: pointer;
+      border-radius: 50%;
+      filter: drop-shadow(0px 2px 4px rgba(191, 196, 201, 0.2)) drop-shadow(0px 3px 4px rgba(191, 196, 201, 0.18))
+        drop-shadow(0px 1px 5px rgba(191, 196, 201, 0.24));
+    }
+
+    @media (max-width: 585px) {
+      button {
+        width: 32px;
+        height: 32px;
+        &:first-child {
+          svg {
+            width: 12px;
+            height: 12px;
+          }
+        }
+        &:last-child {
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    button:last-child {
+      margin-left: 16px;
+    }
+    button:hover {
+      filter: drop-shadow(0px 2px 5px rgba(54, 54, 54, 0.1));
+    }
+    button:active {
+      filter: drop-shadow(0px 3px 4px rgba(222, 125, 11, 0.2)) drop-shadow(0px 1px 10px rgba(249, 89, 8, 0.2));
+    }
+  }
+}
+.button_active {
+  background: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%) !important;
+  path {
+    fill: #ffffff;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.reverse {
+  transform: scale(1, -1);
+}

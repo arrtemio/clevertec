@@ -1,0 +1,97 @@
+.button {
+  border: none;
+  width: 350px;
+  height: 52px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%);
+  color: white;
+  cursor: pointer;
+  margin-top: 39px;
+
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+
+  @media (max-width: 585px) {
+    width: 288px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+
+  &:disabled {
+    box-shadow: none;
+    background: #EBEBEB;
+    cursor: default;
+    &:hover {
+      box-shadow: none
+    }
+    &:active {
+      box-shadow: none
+    }
+  }
+  &:hover {
+    box-shadow: 0 2px 5px rgba(54, 54, 54, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 4px rgba(222, 125, 11, 0.2), 0 1px 10px rgba(249, 89, 8, 0.2);
+  }
+}
+
+.button {
+  border: none;
+  width: 350px;
+  height: 52px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 39px;
+
+  @media (max-width: 880px) {
+    width: 100%;
+  }
+
+  @media (max-width: 585px) {
+    width: 288px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  &:disabled {
+    box-shadow: none;
+    background: #EBEBEB;
+    cursor: default;
+    &:hover {
+      box-shadow: none
+    }
+    &:active {
+      box-shadow: none
+    }
+  }
+  &:hover {
+    box-shadow: 0 2px 5px rgba(54, 54, 54, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 4px rgba(222, 125, 11, 0.2), 0 1px 10px rgba(249, 89, 8, 0.2);
+  }
+
+  &__has {
+    background: #FFFFFF;
+    border: 1px solid #BFC4C9;
+    color: #363636;
+    &:hover {
+      border: 1px solid #A7A7A7;;
+    }
+  }
+  &__not {
+    background: linear-gradient(231.58deg, #f83600 -53.35%, #f9d423 297.76%);
+    color: white;
+  }
+}

@@ -1,0 +1,230 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 279px;
+
+  @media (max-width: 880px) {
+    display: none;
+  }
+
+  p {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+
+    .active_link {
+      background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &:hover {
+      background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__chapter {
+    width: 255px;
+
+    p {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-top: 36px;
+    }
+
+      img {
+        margin-right: 17px;
+        width: 14px;
+        height: 8px;
+      }
+
+      .arrow {
+        transform: rotate(180deg);
+      }
+
+
+    &:has(.active_link) {
+      height: 36px;
+      border-bottom: 1px solid;
+      border-image: linear-gradient(to right, #F83600, #F9D423 ) 1% 49%;
+
+      button {
+        display: block;
+      }
+    }
+  }
+
+  &__wrapper {
+    li {
+      margin: 16px 0 0 24px;
+      font-size: 16px;
+      max-width: 225px;
+      color: black;
+
+      a {
+        display: block;
+        width: 100%;
+      }
+
+      .book_count {
+        color: #A7A7A7;
+        font-size: 14px;
+        padding-left: 4px;
+      }
+
+      &:hover {
+        .book_name {
+          color: #FF5253;
+        }
+      }
+
+      &:first-child {
+        margin-left: 20px;
+      }
+    }
+
+      .active_link {
+
+        .book_name {
+          background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+          .book_count {
+            color: black;
+            font-size: 14px;
+            padding-left: 4px;
+          }
+      }
+    }
+}
+
+.modal {
+  display: none;
+
+  &__container {
+    margin: 0 auto;
+
+    @media (max-width: 880px) {
+      max-width: 640px;
+    }
+    @media (max-width: 585px) {
+      max-width: 288px;
+    }
+  }
+
+  &__active {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+    width: 100%;
+
+    @media (max-width: 880px) {
+      display: block;
+      top: 90px;
+    }
+
+    @media (max-width: 585px) {
+      display: block;
+      top: 76px;
+    }
+
+    hr {
+      width: 100%;
+      border-bottom: 1px solid #BFC4C9;
+      padding-left: 0;
+      margin: 52px 0 32px 0;
+    }
+  }
+
+  &__wrapper {
+    overflow-y: auto;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    @media (max-width: 880px) {
+      height: calc(100vh - 90px);
+      width: 502px;
+    }
+    @media (max-width: 585px) {
+      height: calc(100vh - 76px);
+      width: 288px;
+    }
+    &_body {
+      max-width: 502px;
+      background: #F9F9FA;
+      box-shadow:
+        0 2px 4px rgba(191, 196, 201, 0.2),
+        0 3px 4px rgba(191, 196, 201, 0.18),
+        0 1px 5px rgba(191, 196, 201, 0.24);
+      border-radius: 10px;
+    }
+  }
+
+  &__content {
+    padding: 16px 0 0 32px;
+
+    @media (max-width: 585px) {
+      padding: 16px 0 0 16px;
+    }
+
+
+    .menu {
+      display: flex;
+      @media (max-width: 880px) {
+        width: 438px;
+      }
+      @media (max-width: 585px) {
+        width: 272px;
+      }
+      button {
+        background: #F9F9FA;
+      }
+    }
+  }
+
+  &__content_links {
+    padding: 0 0 52px 32px;
+
+    @media (max-width: 585px) {
+      padding: 0 0 52px 16px;
+    }
+    p {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 28px;
+      width: fit-content;
+
+      &:hover {
+        background: linear-gradient(231.58deg, #F83600 -53.35%, #F9D423 297.76%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.exit {
+  margin-top: 42px;
+}
+
+
+.hidden {
+  display: none;
+}
